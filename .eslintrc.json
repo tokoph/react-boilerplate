@@ -1,0 +1,56 @@
+{
+    "extends": [
+        "airbnb",
+        "plugin:jest/recommended"
+    ],
+    "installedESLint": true,
+    "parser": "babel-eslint",
+    "plugins": [
+        "react",
+        "jest"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 7,
+        "ecmaFeatures": {
+            "classes": true,
+            "jsx": true
+        }
+    },
+    "rules": {
+        "no-console": "off",
+        "class-methods-use-this": "off",
+        "arrow-body-style": "off",
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react/jsx-filename-extension": "error",
+        "react/prop-types": "off",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": [
+                    "**/*.test.{js,jsx}",
+                    "webpack/**/*.js"
+                ]
+            }
+        ]
+    },
+    "settings": {
+        "import/extensions": [".js", ".jsx"],
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".json"]
+            }
+        }
+    },
+    "globals": {
+        "fetch": true,
+        "__DEV__": true,
+        "__TEST__": true,
+        "__PROD__": true,
+        "__REDUX_DEVTOOLS_EXTENSION_COMPOSE__": true
+    },
+    "env": {
+      "browser": true,
+      "jest/globals": true
+    }
+}

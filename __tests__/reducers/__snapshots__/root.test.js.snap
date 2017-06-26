@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createRootReducer return default state 1`] = `
+Object {
+  "counter": 0,
+}
+`;
