@@ -7,8 +7,10 @@
     "test": "NODE_ENV=test jest --coverage",
     "test:watch": "yarn run test -- --watch",
     "build": "yarn run clean && NODE_ENV=production webpack -p --config webpack/config.production.js",
-    "lint": "eslint .",
-    "lint:fix": "yarn run lint -- --fix"
+    "lint": "yarn run lint:js; yarn run lint:scss",
+    "lint:js": "eslint .",
+    "lint:scss": "sass-lint -v",
+    "lint:js:fix": "yarn run lint -- --fix"
   },
   "main": "index.js",
   "author": "Jason Tokoph <jason@tokoph.net>",
